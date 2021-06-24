@@ -1,0 +1,19 @@
+{
+  "name": "frederiqueperrier_3_21062021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fred-Cypher/FrederiquePerrier_3_21062021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fred-Cypher/FrederiquePerrier_3_21062021/issues"
+  },
+  "homepage": "https://github.com/Fred-Cypher/FrederiquePerrier_3_21062021#readme"
+}
