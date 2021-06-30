@@ -5,16 +5,25 @@
 
 a{
     text-decoration: none;
+    color: initial;
 }
 
 body{
     font-family: 'Roboto', sans-serif ;
     width: 100%;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 button{
     border:none;
     color: white;
+    width: 50%;
     text-align: center;
     background: linear-gradient(#ff79da, #9356dc);
     padding: 1em;
@@ -37,17 +46,16 @@ h2{
 
 header{
     border: 1px solid green;
-    text-align: center;
     padding-bottom: 0.5em;
     padding: 1.5em;
     margin-bottom: 0em;
 }
 
-/*.titre{
-    padding: 1.5em;
-    box-shadow: 0 0.5em 10em grey;
-    margin-bottom: 2em;
-}*/
+.sitename{
+    display:flex;
+    justify-content: center;
+}
+
 
 /*--------- Partie présentation entreprise --------*/
 
@@ -77,7 +85,7 @@ header{
         background-color: #f2f2f2;
         text-align: center;
         padding: 2em;
-        max-width: 100%;
+        width: 100%;
 }
 
 .description div{
@@ -203,14 +211,13 @@ header{
 }
 
 .textcard i:hover{ 
-    transition: all 2s;    
+    transition: all 1.3s;
     font-weight: bold;
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 
 
 /*------- Footer -----*/
@@ -222,7 +229,7 @@ footer{
     color :whitesmoke
 }
 
-p{
+.logo{
     margin-bottom: 1em;
     font-weight: lighter;
     font-size: 1.2em;
@@ -245,8 +252,29 @@ ul{
 
 /*--------- Pages restaurants ----------*/
 
+.titlelink{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5em;
+    padding-right: 5em;
+}
+
+.titlelink a{
+    width: 10%;
+}
+
+.titleimage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
 .restaurantimage{
-    max-width: 100%;
+    width: 100%;
+    height: 20em;
     object-fit: cover;
 }
 
@@ -257,6 +285,7 @@ ul{
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     background-color: #e0e0e0;
+    max-width: 100%;
     position: relative;
     margin-top : -2em;
 }
@@ -267,10 +296,20 @@ ul{
     justify-content: space-between;
     font-family: 'Shrikhand', cursive;
     font-size: 2em;
-    padding: 0.7em;
+    padding: 0.7em 1.5em 0.7em 0.7em;;
+}
+
+.restaurant i{
+    font-size: 2em;
+    font-weight: lighter;
+    width: 3em;
+    display: block;
+    position: relative;
+    background: white;
 }
 
 .restaurantname i:hover{
+    transition : all 1.3s;
     font-weight: bold;
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
@@ -283,6 +322,13 @@ ul{
     flex-direction: column;
 }
 
+.titlepart{
+    border-bottom: 0.2em solid #99e2d0 ;
+    height: 1.5em;
+    width: 2.5em;
+    margin-left: 1em;
+}
+
 .dish{
     border: 1px solid green;
     display: flex;
@@ -290,12 +336,87 @@ ul{
     align-items: center;
     justify-content: space-between;
     margin: 0.8em;
+    height: 4.2em;
     line-height: 1.5em;
-    padding: 0.4em;
     background-color: white;
     border-radius: 1.2em;
     box-shadow: 0.3em 0.3em 0.3em #c9c8c8;
 }
+
+.descriptiondish{
+    margin: 0.4em 0 0.4em 1em;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4.2em;
+    border: 1px solid red;
+    background-color: #99e2d0;
+    z-index: 1;
+    border-bottom-right-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+    position : absolute;
+    right: -5em;
+    transition: all 1s;
+}
+
+.dish:hover .checkbox{
+    right: 0.8em;
+
+}
+
+input[type=checkbox]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+input[type=checkbox] {
+    border-radius: 1.2em;
+    height: 1.9em;
+    width: 1.9em;
+    background: white;
+    border: 1px solid #99e2d0;
+}
+
+
+input[type="checkbox"]:checked {
+    background: white;
+    margin:0;
+    position: relative;}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    display: block;
+    color: #99e2d0;
+    font-size: 1.3em;
+    font-weight: bold;
+    position: absolute;
+    padding-left: 0.3em;
+}
+
+.price{
+    font-weight: bold;
+    margin-right: 3em;
+    margin-top: 1.2em;
+    position: absolute;
+    right: 0;
+    transition: right 1s;
+}
+
+.dish:hover .price{
+    right: 4em;
+}
+
+.command{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
 
 /*-------- Ecran plus grand que mobile --------- */
 
