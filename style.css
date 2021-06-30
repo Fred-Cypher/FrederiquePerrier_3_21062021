@@ -24,6 +24,11 @@ button{
     box-shadow: 0.2em 0.2em 0.2em #e0e0e0;
 }
 
+button:hover{
+    background: linear-gradient(#ff94e1, #a978e3);
+    box-shadow: 0.3em 0.3em 0.3em #afaeae;
+}
+
 h2{
     margin-left: 1em;
 }
@@ -31,9 +36,9 @@ h2{
 /*----- Header -----*/
 
 header{
-    /*border: 1px solid green;*/
+    border: 1px solid green;
     text-align: center;
-    /*padding-bottom: 0.5em;*/
+    padding-bottom: 0.5em;
     padding: 1.5em;
     margin-bottom: 0em;
 }
@@ -47,7 +52,7 @@ header{
 /*--------- Partie présentation entreprise --------*/
 
 .presentation{
-    /*border: 1px solid grey;*/
+    border: 1px solid grey;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -108,12 +113,13 @@ header{
     background-color: #ecddff;
 }
 
-.list:hover i{
-    color: #9356dc;
-}
 .list i{
     color: grey;
     font-size: 1.2em;
+}
+
+.list:hover i{
+    color: #9356dc;
 }
 
 .list .number{
@@ -186,21 +192,26 @@ header{
     line-height: 1.6em;
 }
 
-.textcard i{
+.textcard i {
     font-size: 1.6em;
     font-weight: lighter;
     width: 2em;
     margin-top: 0.3em;
+    display: block;
+    position: relative;
+    background: white;
 }
 
-.textcard i:hover{
+.textcard i:hover{ 
+    transition: all 2s;    
     font-weight: bold;
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
+
+
 
 /*------- Footer -----*/
 
@@ -211,7 +222,7 @@ footer{
     color :whitesmoke
 }
 
-h4{
+p{
     margin-bottom: 1em;
     font-weight: lighter;
     font-size: 1.2em;
@@ -246,6 +257,8 @@ ul{
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     background-color: #e0e0e0;
+    position: relative;
+    margin-top : -2em;
 }
 
 .restaurantname{
