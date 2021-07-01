@@ -18,6 +18,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
 button{
@@ -51,7 +52,7 @@ header{
     margin-bottom: 0em;
 }
 
-.sitename{
+.site-name{
     display:flex;
     justify-content: center;
 }
@@ -81,14 +82,14 @@ header{
     align-items: center;
 }
 
-.description{
+.enterprise-description{
         background-color: #f2f2f2;
         text-align: center;
         padding: 2em;
         width: 100%;
 }
 
-.description div{
+.enterprise-description div{
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -153,7 +154,7 @@ header{
     background-color: #f2f2f2;
 }
 
-.restaurantcard{
+.restaurant-card{
     border : 1px solid violet;
     margin-top: 2em;
     background-color: white;
@@ -161,15 +162,15 @@ header{
     box-shadow: 0.3em 0.3em 0.3em #e0e0e0;
 }
 
-.restaurantcard a{
+.restaurant-card a{
     color:black;
 }
 
-.topcard{
+.top-card{
     height: 10em;
 }
 
-.imagecard{
+.image-card{
     width: 100%;
     height: 10em;
     object-fit: cover;
@@ -192,7 +193,7 @@ header{
     bottom: 90%;
 }
 
-.textcard{
+.text-card{
     display: flex;
     flex-direction: row;
     padding: 1em;
@@ -200,7 +201,7 @@ header{
     line-height: 1.6em;
 }
 
-.textcard i {
+.text-card i {
     font-size: 1.6em;
     font-weight: lighter;
     width: 2em;
@@ -210,9 +211,9 @@ header{
     background: white;
 }
 
-.textcard i:hover{ 
-    transition: all 1.3s;
+.text-card i:hover{ 
     font-weight: bold;
+    transition: all 1.3s cubic-bezier(0,.69,1,.6);
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -252,7 +253,7 @@ ul{
 
 /*--------- Pages restaurants ----------*/
 
-.titlelink{
+.title-link{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -260,11 +261,11 @@ ul{
     padding-right: 5em;
 }
 
-.titlelink a{
+.title-link a{
     width: 10%;
 }
 
-.titleimage{
+.title-image{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -272,7 +273,7 @@ ul{
     width: 90%;
 }
 
-.restaurantimage{
+.restaurant-image{
     width: 100%;
     height: 20em;
     object-fit: cover;
@@ -290,7 +291,7 @@ ul{
     margin-top : -2em;
 }
 
-.restaurantname{
+.restaurant-name{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -308,7 +309,7 @@ ul{
     background: white;
 }
 
-.restaurantname i:hover{
+.restaurant-name i:hover{
     transition : all 1.3s;
     font-weight: bold;
     background: -webkit-linear-gradient(#9356dc, #ff79da);
@@ -317,12 +318,12 @@ ul{
     -webkit-text-fill-color: transparent;
 }
 
-.menupart{
+.menu-part{
     display: flex;
     flex-direction: column;
 }
 
-.titlepart{
+.title-part{
     border-bottom: 0.2em solid #99e2d0 ;
     height: 1.5em;
     width: 2.5em;
@@ -337,13 +338,16 @@ ul{
     justify-content: space-between;
     margin: 0.8em;
     height: 4.2em;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
     line-height: 1.5em;
     background-color: white;
     border-radius: 1.2em;
     box-shadow: 0.3em 0.3em 0.3em #c9c8c8;
 }
 
-.descriptiondish{
+.description-dish{
     margin: 0.4em 0 0.4em 1em;
 }
 
@@ -355,17 +359,15 @@ ul{
     height: 4.2em;
     border: 1px solid red;
     background-color: #99e2d0;
-    z-index: 1;
     border-bottom-right-radius: 1.2em;
     border-top-right-radius: 1.2em;
-    position : absolute;
-    right: -5em;
+    position : relative;
+    right: -4.2em;
     transition: all 1s;
 }
 
 .dish:hover .checkbox{
-    right: 0.8em;
-
+    right: 0em;
 }
 
 input[type=checkbox]{
