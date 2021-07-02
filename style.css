@@ -11,6 +11,7 @@ a{
 body{
     font-family: 'Roboto', sans-serif ;
     width: 100%;
+    height: auto;
     overflow-x: hidden;
 }
 
@@ -42,6 +43,67 @@ button:hover{
 h2{
     margin-left: 1em;
 }
+
+/*--------- Loader ---------*/
+
+.loader-background{
+    width: 100%;
+    height: 100%;
+    background-color: #99e2d057;
+    border : 1px solid red;
+    z-index: 1;
+    position: fixed;
+}
+
+.loader {
+    animation: load 1s infinite linear;
+    border: solid 0.9em transparent;
+    border-radius: 50%;
+    border-right-color: #9356dc;
+    border-top-color: #9356dc;
+    box-sizing: border-box;
+    height: 10em;
+    left: calc(50% - 5em);
+    position: fixed;
+    top: calc(50% - 5em);
+    width: 10em;
+    z-index: 2; }
+
+.loader::before {
+    animation: load 1.5s infinite linear;
+    border: solid 0.9em transparent;
+    border-radius: 50%;
+    border-right-color: #99e2d0;
+    border-top-color: #99e2d0;
+    box-sizing: border-box;
+    content: "";
+    height: 8em;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8em; }
+
+.loader::after {
+    animation: load 2s infinite linear;
+    border: solid 0.9em transparent;
+    border-radius: 50%;
+    border-right-color: #ff79da;
+    border-top-color: #ff79da;
+    box-sizing: border-box;
+    content: "";
+    height: 6em;
+    left: 1em;
+    position: absolute;
+    top: 1em;
+    width: 6em; }
+
+@keyframes load {
+100% {
+    transform: rotate(360deg);
+    } 
+}
+
+
 
 /*----- Header -----*/
 
@@ -86,7 +148,7 @@ header{
         background-color: #f2f2f2;
         text-align: center;
         padding: 2em;
-        width: 100%;
+        width: auto;
 }
 
 .enterprise-description div{
@@ -213,21 +275,19 @@ header{
 
 .text-card i:hover{ 
     font-weight: bold;
-    transition: all 1.3s cubic-bezier(0,.69,1,.6);
+    transition: all 1.3s cubic-bezier(0,.69,0,.6);
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
 /*------- Footer -----*/
 
 footer{
     border : 1px solid royalblue;
     padding: 2em;
     background-color: #161616;
-    color :whitesmoke
+    color : white; 
 }
 
 .logo{
@@ -273,6 +333,10 @@ ul{
     width: 90%;
 }
 
+.title-part{
+    margin-top: 1.5em;
+}
+
 .restaurant-image{
     width: 100%;
     height: 20em;
@@ -310,17 +374,23 @@ ul{
 }
 
 .restaurant-name i:hover{
-    transition : all 1.3s;
     font-weight: bold;
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: 3s linear 0s running fullheart;
+}
+
+@keyframes fullheart{
+    from{opacity:0}
+    to{opacity:1}
 }
 
 .menu-part{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .title-part{
@@ -328,6 +398,7 @@ ul{
     height: 1.5em;
     width: 2.5em;
     margin-left: 1em;
+    animation: 2.5s ease-in-out 0s running slide;
 }
 
 .dish{
@@ -344,11 +415,34 @@ ul{
     line-height: 1.5em;
     background-color: white;
     border-radius: 1.2em;
-    box-shadow: 0.3em 0.3em 0.3em #c9c8c8;
+    box-shadow: 0.3em 0.3em 0.3em #c9c8c8;    
+    animation: 2.5s ease-in-out 0s running slide;
+}
+
+/*@keyframes slide {
+    from{ margin-top: 100%;}
+    to{ margin-top: 0.8;}
+    
+}*/
+
+@keyframes slide {
+    from{ margin-top: 3em;
+    opacity: 0;}
+    to{ margin-top: 0.8;
+    opacity: 1;}
+    
 }
 
 .description-dish{
     margin: 0.4em 0 0.4em 1em;
+
+}
+
+.dish:hover .description-dish{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 57%;
 }
 
 .checkbox{
@@ -370,34 +464,26 @@ ul{
     right: 0em;
 }
 
-input[type=checkbox]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-}
-
-input[type=checkbox] {
-    border-radius: 1.2em;
-    height: 1.9em;
-    width: 1.9em;
+.circle{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 1.6em;
+    width: 1.6em;    
+    position: relative;
     background: white;
     border: 1px solid #99e2d0;
+    border-radius: 50%;
 }
 
-
-input[type="checkbox"]:checked {
-    background: white;
-    margin:0;
-    position: relative;}
-
-input[type="checkbox"]:checked::before {
-    content: '\2713';
-    display: block;
+.fa-check{
+    padding-top: 0.3em;;
     color: #99e2d0;
-    font-size: 1.3em;
-    font-weight: bold;
-    position: absolute;
-    padding-left: 0.3em;
+    transition: all 1s;
+}
+
+.dish:hover .fa-check{
+    transform: rotate(360deg);
 }
 
 .price{
