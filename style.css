@@ -60,17 +60,17 @@ h2{
 @keyframes loaderback {
     0%{
         opacity: 1;
-        display: flex;
+        /*display: flex;*/
         z-index: 2;
     }
     99%{
         opacity :1;
-        display: flex;
+        /*display: flex;*/
         z-index: 1;
     }
     100%{
         opacity: 0;
-        display: none;
+        /*display: none;*/
         z-index: -2;
     }
     
@@ -179,6 +179,7 @@ header{
 
 .fonctionnement{
     border : 1px solid blue;
+    padding-top: 2em;;
     width: 100%;
 }
 
@@ -232,6 +233,8 @@ header{
 /*------ Cartes des restaurants -------*/
 
 .card{
+    display: flex;
+    flex-direction: column;
     border : 1px solid yellow;
     padding: 2em;
     background-color: #f2f2f2;
@@ -305,6 +308,7 @@ header{
 /*------- Footer -----*/
 
 footer{
+    display:flex;
     border : 1px solid royalblue;
     padding: 2em;
     background-color: #161616;
@@ -400,7 +404,7 @@ ul{
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: 3s linear 0s running fullheart;
+    animation: fullheart 3s linear 0s;
 }
 
 @keyframes fullheart{
@@ -419,7 +423,7 @@ ul{
     height: 1.5em;
     width: 2.5em;
     margin-left: 1em;
-    animation: 2.5s ease-in-out 0s running slide;
+    animation: slide 2.5s ease-in-out 0s;
 }
 
 .dish{
@@ -437,7 +441,7 @@ ul{
     background-color: white;
     border-radius: 1.2em;
     box-shadow: 0.3em 0.3em 0.3em #c9c8c8;    
-    animation: 2.5s ease-in-out 0s running slide;
+    animation: slide 2.5s ease-in-out 0s;
 }
 
 /*@keyframes slide {
@@ -449,7 +453,7 @@ ul{
 @keyframes slide {
     from{ margin-top: 3em;
     opacity: 0;}
-    to{ margin-top: 0.8;
+    to{ margin-top: 0.8em;
     opacity: 1;}
     
 }
@@ -529,6 +533,7 @@ ul{
 
 /*-------- Ecran plus grand que mobile --------- */
 
-@media screen and (min-width:640px){
-    
-}
+@media screen and (min-width: 750px) and (max-width: 1024px)
+    {
+
+    }
