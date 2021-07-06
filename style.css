@@ -44,7 +44,7 @@ h2{
     margin-left: 1em;
 }
 
-/*--------- Loader ---------*/
+/*----------------------- Loading spinner  ----------------------------*/
 
 .loader-background{
     display: flex;
@@ -54,26 +54,22 @@ h2{
     border : 1px solid red;
     z-index: 2;
     position: fixed;
-    animation: loaderback 3s ease-in-out forwards;
+    animation: loaderback 2s ease-in-out forwards;
 }
 
 @keyframes loaderback {
     0%{
         opacity: 1;
-        /*display: flex;*/
         z-index: 2;
     }
     99%{
-        opacity :1;
-        /*display: flex;*/
+        opacity: 1;
         z-index: 1;
     }
     100%{
         opacity: 0;
-        /*display: none;*/
         z-index: -2;
     }
-    
 }
 
 .loader {
@@ -125,8 +121,7 @@ h2{
 }
 
 
-
-/*----- Header -----*/
+/*------------------- Header ------------------*/
 
 header{
     border: 1px solid green;
@@ -141,7 +136,7 @@ header{
 }
 
 
-/*--------- Partie présentation entreprise --------*/
+/*------------- Partie présentation entreprise ---------------*/
 
 .presentation{
     border: 1px solid grey;
@@ -153,9 +148,8 @@ header{
     background-color: #e9e7e7;
 }
 
-.city{
+.presentation h3{
     margin-left: 1.5em;
-    font-weight: bold;
 }
 
 .enterprise{
@@ -166,10 +160,10 @@ header{
 }
 
 .enterprise-description{
-        background-color: #f2f2f2;
-        text-align: center;
-        padding: 2em;
-        width: auto;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 2em;
+    width: auto;
 }
 
 .enterprise-description div{
@@ -215,7 +209,7 @@ header{
     color: #9356dc;
 }
 
-.list .number{
+.number{
     display: flex;
     background-color: #9356dc;
     color: white;
@@ -230,7 +224,9 @@ header{
     position: absolute;
     left: 2.3em;
 }
-/*------ Cartes des restaurants -------*/
+
+
+/*------------ Cartes des restaurants ---------------*/
 
 .card{
     display: flex;
@@ -241,6 +237,7 @@ header{
 }
 
 .restaurant-card{
+    display: flex;
     border : 1px solid violet;
     margin-top: 2em;
     background-color: white;
@@ -275,7 +272,7 @@ header{
     height: 2em;
     width: 5em;
     position: relative;
-    left: 75%;
+    left: 70%;
     bottom: 90%;
 }
 
@@ -305,7 +302,9 @@ header{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/*------- Footer -----*/
+
+
+/*-------------------- Footer -------------------*/
 
 footer{
     display:flex;
@@ -336,7 +335,7 @@ ul{
 }
 
 
-/*--------- Pages restaurants ----------*/
+/*--------------------- Pages restaurants -----------------------*/
 
 .title-link{
     display: flex;
@@ -344,6 +343,7 @@ ul{
     justify-content: center;
     font-size: 1.5em;
     padding-right: 5em;
+    width: 100%;
 }
 
 .title-link a{
@@ -375,7 +375,7 @@ ul{
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     background-color: #e0e0e0;
-    max-width: 100%;
+    width: 100%;
     position: relative;
     margin-top : -2em;
 }
@@ -423,6 +423,7 @@ ul{
     height: 1.5em;
     width: 2.5em;
     margin-left: 1em;
+    margin-top: 0.8em;
     animation: slide 2.5s ease-in-out 0s;
 }
 
@@ -445,13 +446,15 @@ ul{
 }
 
 /*@keyframes slide {
-    from{ margin-top: 100%;}
-    to{ margin-top: 0.8;}
+    from{ margin-top: 30%;
+        opacity: 0;}
+    to{ margin-top: 0.8em;
+        opacity: 1;}
     
 }*/
 
 @keyframes slide {
-    from{ margin-top: 3em;
+    from{ margin-top: 4em;
     opacity: 0;}
     to{ margin-top: 0.8em;
     opacity: 1;}
@@ -460,7 +463,6 @@ ul{
 
 .description-dish{
     margin: 0.4em 0 0.4em 1em;
-
 }
 
 .dish:hover .description-dish{
@@ -531,9 +533,193 @@ ul{
 }
 
 
-/*-------- Ecran plus grand que mobile --------- */
+/*------------------- Ecrans plus grand que mobile -------------------- */
 
-@media screen and (min-width: 750px) and (max-width: 1024px)
-    {
+/*------------------------ Tablettes-----------------------------*/
 
+
+@media screen and (min-width: 750px) and (max-width: 1024px){
+
+    main{
+        align-items: center;
     }
+
+    .presentation{
+        width: 100%;
+    }
+
+    .enterprise{
+        width: 100%;
+    }
+    .enterprise-description{
+        width: 100%;
+    }
+
+    button{
+        width: 30%;
+    }
+
+    .fonctionnement{
+        width: 50%;
+    }
+
+    .list .number{
+        position: absolute;
+        left: 28.5%;
+    }
+
+    .card{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2em 0 2em 0;
+    }
+
+    .card-title{
+        width: 100%;
+        padding-left: 1em;
+    }
+
+    .restaurant-card{
+        width: 45%;
+        margin-left: 2em;
+    }
+
+    .new{
+        left: 75%;
+    }
+
+    .menu{
+        align-items: center;
+    }
+
+    .restaurant-name{
+        width: 60%;
+    }
+
+    .dishes{
+        width: 65%;
+    }
+
+    .price{
+        margin-right: 2em;
+    }
+    
+    .command{
+        width: 70%;
+    }
+}
+
+/*------------------- Desktop-----------------*/
+
+@media screen and (min-width: 1025px){
+
+    main{
+        align-items: center;
+    }
+
+    .presentation{
+        width: 100%;
+    }
+
+    .enterprise{
+        width: 100%;
+    }
+
+    .enterprise-description{
+        width: 100%;
+    }
+
+    button{
+        width: 25%;
+    }
+
+    .fonctionnement{
+        width: 100%;
+    }
+
+    .choice{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .list{
+        width: 30%;
+        margin : 0.7em 0 0.7em 0;
+        padding: 1.3em 0 1.3em 0;
+        justify-content: center;
+    }
+
+    .list i{
+        margin-right: 1.5em;
+    }
+
+    .number{
+        position: relative;
+        left: -17%;
+        }
+
+    .card{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2em 0 2em 0;
+    }
+
+    .card-title{
+        width: 100%;
+        padding-left: 1em;
+    }
+
+    .restaurant-card{
+        width: 45%;
+        margin-left: 2em;
+    }
+
+    .new{
+        left : 80%
+    }
+
+    .menu{
+        align-items: center;
+    }
+
+    .restaurant-name{
+        width: 60%;
+    }
+
+    .dishes{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .menu-part{
+        width: 33%;
+    }
+
+    .dish{
+        height: 6em;
+    }
+
+    h4{
+        margin-bottom: 0.3em;
+    }
+
+    .dish:hover h4{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .checkbox{
+        height: 6em;
+    }
+
+    .price{
+        margin-right: 1em;
+    }
+
+    .command{
+        width: 50%;
+    }
+
+}
