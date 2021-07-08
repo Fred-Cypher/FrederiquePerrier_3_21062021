@@ -477,6 +477,10 @@ ul{
 
 .description-dish{
     margin: 0.4em 0 0.4em 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 70%;
 }
 
 .description-dish h2{
@@ -557,7 +561,7 @@ ul{
 }
 
 
-/*------------------- Ecrans plus grand que mobile -------------------- */
+/*------------------- Ecrans plus grands que mobile -------------------- */
 
 /*------------------------ Tablettes-----------------------------*/
 
@@ -716,6 +720,7 @@ ul{
 
     .dish{
         height: 6em;
+        line-height: 2;
     }
 
     h4{
