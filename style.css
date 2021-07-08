@@ -414,6 +414,7 @@ ul{
 }
 
 .restaurant-name i:hover{
+    cursor: pointer;
     font-weight: bold;
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
@@ -484,21 +485,21 @@ ul{
 }
 
 .description-dish h2{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: 1em;
 }
 
 .dish:hover .description-dish{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.5s;
     width: 57%;
 }
 
 .dish:hover .description-dish h2{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
+    cursor: pointer;
+    width: 90%;
 }
 
 .checkbox{
@@ -517,6 +518,7 @@ ul{
 }
 
 .dish:hover .checkbox{
+    cursor: pointer;
     right: 0em;
 }
 
@@ -551,6 +553,7 @@ ul{
 }
 
 .dish:hover .price{
+    cursor: pointer;
     right: 4em;
 }
 
