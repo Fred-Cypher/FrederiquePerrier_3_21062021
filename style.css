@@ -50,7 +50,7 @@ button:active{
     background-color: #99e2d057;
     z-index: 10;
     position: fixed;
-    animation: loaderback 2.5s ease-in-out forwards;
+    animation: loaderback 2.5s linear forwards;
 }
 
 @keyframes loaderback {
@@ -137,7 +137,7 @@ header{
 
 /*------------- Partie présentation entreprise ---------------*/
 
-.presentation{
+.city{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -146,7 +146,7 @@ header{
     background-color: #e9e7e7;
 }
 
-.presentation p{
+.city p{
     margin-left: 1.5em;
     font-weight: bold;
 }
@@ -298,12 +298,12 @@ header{
 
 .text-card i:hover,
 .text-card i:active{ 
+    transition: all 1s ease;
     font-weight: bold;
-    transition: all 1.3s cubic-bezier(0,.69,0,.6);
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background-clip: content-box;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;  
 }
 
 
@@ -572,7 +572,7 @@ ul{
         align-items: center;
     }
 
-    .presentation{
+    .city{
         width: 100%;
     }
 
@@ -641,7 +641,7 @@ ul{
         align-items: center;
     }
 
-    .presentation{
+    .city{
         width: 100%;
     }
 
