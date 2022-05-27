@@ -1,4 +1,4 @@
-# FrederiquePerrier_3_21062021
+# Projet 3 du parcours Développeur Web d'OpenClassrooms
 
 Dossier pour le Projet 3 du parcours Développeur Web d'OPenClassRooms : Dynamisez une page web avec des animations CSS
 
@@ -35,4 +35,4 @@ Contraintes techniques :
   - header présent sur toutes les pages, sur la page d'accueil il contient le logo et sur les pages de menu un bouton de retour vers la page d'accueil
 
 
-Lien vers le site : https://fred-cypher.github.io/FrederiquePerrier_3_21062021/index.html
+Lien vers le site : https://fred-cypher.github.io/P3-OhMyFood/
